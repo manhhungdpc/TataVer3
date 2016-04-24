@@ -1,0 +1,328 @@
+html,
+body{
+
+    background-color: #ffffff;
+    background-attachment: fixed;
+    background-position: 20% 2%;
+    max-width: 100%;
+    margin:0 auto;
+    font-family: sans-serif,'Passion One';  
+}
+.container{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+header{
+    background-color: rgba(39, 45, 69, 0.96);
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+.header-bot{
+   background: #f2f2f2 url("http://tata.edu.vn/img/bg_pic1.jpg") left top fixed no-repeat;
+   background-origin: border-box;
+   z-index: 1;
+}
+#contents{
+    background-color: #f2f2f2;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+    display: block;
+}
+.thump{
+    padding-bottom: 3em;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sub-main-top .thump{
+    border:1px solid rgb(218, 218, 218);
+    padding-top: 5em;
+}
+.bot-image{
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 100%;
+    background: #b93a41;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 2.5em;
+    margin-top: -7.5em;
+}
+.sub-main-top .thump, .sub-main-mid{
+    background-color: #ffffff;
+}
+.medium-size{
+    color: rgb(85, 90, 120);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.small-size,{
+    color: rgb(143, 143, 143);
+}
+a,.lead,.big-size,.btn{
+    color: #ececec;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lead{
+    font-style: normal;
+    font-family: "Passion One";
+    color: #fff;
+}
+.lead{
+    margin-bottom: 0;
+}
+.header-bot .big-size,.menu{
+    font-weight: bolder;
+}
+.header-bot .small-size,.menu,.btn-danger{
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.nav > li {
+    position: relative;
+    display: inline-block;
+}
+.nav > li > a{
+    font-size: 80%;
+    font-weight: 900;
+}
+.btn,.menu{
+    text-transform: uppercase;
+    line-height: 0.7em;
+    margin-top: 25px;
+    font-size: 100%;
+}
+.btn{
+    line-height: 1.5em;
+    max-height: 250px;
+}
+.sub-main-top, .sub-main-mid, .sub-main-bot{
+    margin-right: auto;
+    margin-left: auto;
+}
+.sub-main-bot .thump{
+    background-color: #b93a41;
+    color: white;
+}
+.sologan{
+    margin-top: 5em;
+}
+.main-bot{
+    background-color: rgb(85, 90, 120);
+    margin-top: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    max-width: 100%;
+    height: auto;
+}
+footer {
+    background-color: #b93a41;
+    color: white;
+    margin-top: 0em;
+    padding-top: 2em;
+    margin-bottom: 0em;
+}
+.sub-main-bot .thump{
+   margin-top: 0em;
+}
+.sub-main-bot .thump p,.gift{
+    margin-top: 3em;
+    margin-left: 2em;
+}
+.sub-main-bot {
+    margin-bottom: 0em;
+}
+/* hieu ung */
+.btn-danger{
+    color: #fff;
+    background-color: #B93A41;
+}
+.btn-danger:hover {
+    color: #c9302c;
+    background-color: #fff;
+    border-color: #ac2925;
+}
+.btn-primary{
+    font-size: 80%;
+    background-color: #555a78;
+    color: #fff;
+    font-weight: 800;
+}
+.btn-primary:hover {
+    color: #555a78;
+    background-color: #fff;
+    border-color: #204d74;
+}
+.btn{
+    border-radius: 0px;
+    border: 1px solid #f8f8f8;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    color: #ececec;
+    background-color: inherit;
+    border-bottom: 1px solid #f8f8f8;
+    border-top: 1px solid #f8f8f8;
+    transition: all 0.3s;
+}
+
+
+
+/* login page main */
+.site-login{
+    background-color: white;
+    margin-top: 20em;
+}
+@media (max-width: 780px) {
+    .big-size{
+        font-size: 40px;
+    }
+    .small-size,{
+        font-size: 100%;
+    }
+    .medium-size{
+        font-size: 130%;
+    }
+    .sub-main-top, .sub-main-mid, .sub-main-bot {
+        margin-right: 0em;
+        margin-left: 0em;
+        padding: 0em;
+        margin-top: 5em;
+    }
+    .thump{
+        margin-top: 7em;
+    }
+    .sub-main-bot .thump{
+        height: 19em;
+    }
+    .header-bot .big-size{
+        margin-top: 8em;
+    }
+    .header-bot .small-size{
+        margin-bottom: 12em;
+        font-size: 13px;
+    }
+}
+@media (max-width: 992px) and (min-width: 780px)  {
+    header{
+        max-width: 88%;
+        height: 19em;
+        margin-left: 6%;
+    }
+    .big-size{
+        font-size: 55px;
+    }
+    .small-size{
+        font-size: 100%;
+    }
+    .medium-size{
+        font-size: 130%;
+    }
+    .sub-main-top, .sub-main-mid, .sub-main-bot {
+        margin-right: 0em;
+        margin-left: 0em;
+        padding: 0em;
+        margin-top: 5em;
+    }
+    .thump{
+        margin-top: 7em;
+    }
+    .sub-main-bot .thump,#footer-image{
+        height: 17em;
+    }
+    .header-bot .big-size{
+        margin-top: 8em;
+    }
+    .header-bot .small-size{
+        margin-bottom: 10em;
+    }
+}
+
+@media (min-width: 992px) {
+    header{
+        max-width: 92%;
+        height: 6em;
+        margin-left: 4%;
+    }
+    .big-size{
+        font-size: 55px;
+    }
+    .small-size,{
+        font-size: 100%;
+    }
+    .medium-size{
+        font-size: 130%;
+    }
+    .sub-main-top, .sub-main-mid, .sub-main-bot {
+        margin-right: 0em;
+        margin-left: 0em;
+        padding: 0em;
+        margin-top: 5em;
+    }
+    .thump{
+        margin-top: 3.5em;
+    }
+   .sub-main-bot .thump,#footer-image{
+        height: 17em;
+    }
+    .header-bot .big-size{
+        margin-top: 4em;
+        line-height: 55px;
+        margin-bottom: 8px;
+    }
+    .header-bot .small-size{
+        margin-bottom: 11em;
+        font-size: 15px;
+    }
+}
+@media (min-width: 1200px) {
+    header{
+        max-width: 92%;
+        height: 6em;
+        margin-left: 4%;
+    }
+    .big-size{
+        font-size: 60px;
+    }
+    .small-size{
+        font-size: 120%;
+    }
+    .medium-size{
+        font-size: 170%;
+    }
+    .sub-main-top, .sub-main-mid, .sub-main-bot {
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0em;
+        margin-top: 5em;
+    }
+   .sub-main-bot .thump,#footer-image{
+        height: 17em;
+    }
+    .thump{
+        margin-top: 3.5em;
+    }
+    .sub-main-bot .thump{
+        height: 18em;
+        margin-left: 2em;
+    }
+}
