@@ -1,12 +1,16 @@
-html,
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
 body{
-
     background-color: #ffffff;
     background-attachment: fixed;
-    background-position: 20% 2%;
+    background-position: all;
     max-width: 100%;
     margin:0 auto;
-    font-family: sans-serif,'Passion One';  
+    font-family: sans-serif,'Passion One';
+    font-size: 15px;  
 }
 .container{
     margin: 0px;
@@ -34,7 +38,19 @@ header{
    background-origin: border-box;
    z-index: 1;
 }
-#contents{
+.header-bot .big-size{
+    font-family: 'Passion One',cursive;
+    color: #ffffff;
+    letter-spacing:1px;
+    font-weight: bolder;
+}
+.header-bot .small-size{
+    color: #ffffff;
+    font-weight: 900;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+.contents {
     background-color: #f2f2f2;
     width: 100%;
     margin-left: 0px;
@@ -49,6 +65,7 @@ header{
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    color: #8f8f8f;
 }
 .sub-main-top .thump{
     border:1px solid rgb(218, 218, 218);
@@ -66,54 +83,66 @@ header{
     margin-bottom: 2.5em;
     margin-top: -7.5em;
 }
-.sub-main-top .thump, .sub-main-mid{
+.sub-main-mid,.sub-main-top .thump{
     background-color: #ffffff;
 }
+.sub-main-top .thump .small-size{
+    padding-right: auto;
+    padding-left: auto;
+}
+.sub-main-top .thump .medium-size{
+    margin-bottom: 1em;
+}
 .medium-size{
-    color: rgb(85, 90, 120);
+    color: rgb(85,90,120);
     font-weight: 700;
     text-transform: uppercase;
 }
 .small-size,{
     color: rgb(143, 143, 143);
 }
-a,.lead,.big-size,.btn{
-    color: #ececec;
+.main-bot .small-size {
+    color: #f2f2f2;
+    font-size: 15px;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+a,.lead,.btn{
     margin-left: auto;
     margin-right: auto;
-}
-.lead{
-    font-style: normal;
-    font-family: "Passion One";
-    color: #fff;
-}
-.lead{
-    margin-bottom: 0;
-}
-.header-bot .big-size,.menu{
-    font-weight: bolder;
-}
-.header-bot .small-size,.menu,.btn-danger{
-    font-weight: bold;
-    font-family: sans-serif;
 }
 .nav > li {
     position: relative;
     display: inline-block;
 }
 .nav > li > a{
-    font-size: 80%;
-    font-weight: 900;
+  color: #ececec;
+  line-height: 0.5em;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: arial;
 }
-.btn,.menu{
+.menu{
+    margin-top: 1.5em;
     text-transform: uppercase;
-    line-height: 0.7em;
-    margin-top: 25px;
-    font-size: 100%;
+    display: block;
 }
-.btn{
-    line-height: 1.5em;
-    max-height: 250px;
+header .btn{
+    text-transform: uppercase;
+    line-height: 1.7em;
+    margin-top: 1.5em;
+    width: 260px;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    font-weight: 700;
+    font-size: 0.85em;
 }
 .sub-main-top, .sub-main-mid, .sub-main-bot{
     margin-right: auto;
@@ -145,11 +174,20 @@ footer {
    margin-top: 0em;
 }
 .sub-main-bot .thump p,.gift{
-    margin-top: 3em;
+    margin-top: 2em;
     margin-left: 2em;
 }
 .sub-main-bot {
     margin-bottom: 0em;
+}
+.main-bot .medium-size{
+    font-size: 200%;
+    color: #ffffff;
+}
+.sub-main-bot .btn {
+    margin-top: 3em;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 /* hieu ung */
 .btn-danger{
@@ -162,7 +200,7 @@ footer {
     border-color: #ac2925;
 }
 .btn-primary{
-    font-size: 80%;
+    font-size: 100%;
     background-color: #555a78;
     color: #fff;
     font-weight: 800;
@@ -184,15 +222,54 @@ footer {
     border-top: 1px solid #f8f8f8;
     transition: all 0.3s;
 }
-
-
-
-/* login page main */
-.site-login{
-    background-color: white;
-    margin-top: 20em;
+/* member page main */
+.son-site{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-bottom: 9em;
 }
+.son-site .container{
+    background-color: #ffffff;
+}
+/* login site */
+.site-login{
+    margin-right: auto;
+    margin-left: auto;
+}
+/*homework-site */
+
+/*study-site */
+.site-study .container{
+    width: 88%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.site-study .thump{
+    margin-top: 2em;
+    padding-bottom: 1em;
+}
+.site-study .medium-size {
+    line-height: 8px;
+}
+img.study-icons {
+    border: 1px solid;
+}
+/* read more site */
+.readmore-view{
+    text-align: left;
+    padding-right: 3em;
+    padding-left: 3em;
+}
+.wrap-text {
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+}
+
 @media (max-width: 780px) {
+    header{
+        overflow: hidden;
+    }
     .big-size{
         font-size: 40px;
     }
@@ -202,9 +279,15 @@ footer {
     .medium-size{
         font-size: 130%;
     }
+    .nav{
+        padding-bottom: 2em;
+        max-width: 250px;
+        margin-right: auto;
+        margin-left: auto;
+    }
     .sub-main-top, .sub-main-mid, .sub-main-bot {
-        margin-right: 0em;
-        margin-left: 0em;
+        margin-right: auto;
+        margin-left: auto;
         padding: 0em;
         margin-top: 5em;
     }
@@ -221,12 +304,41 @@ footer {
         margin-bottom: 12em;
         font-size: 13px;
     }
+    .son-site .container{
+        margin-top: 18em;
+    }
+    /*study-site*/
+    img.study-icons {
+       width: 250px;
+       height: 125px;
+   }
+   .site-study .container{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    /*homework-site*/
+    .homework .container {
+        width: 95%;
+    }
+    .homework-items {
+        margin-right: auto;
+        margin-left: auto;
+        padding:2em 0.5em 2em 0.5em;
+    }
 }
 @media (max-width: 992px) and (min-width: 780px)  {
     header{
         max-width: 88%;
         height: 19em;
         margin-left: 6%;
+        overflow: hidden;
+    }
+    .sub-header{
+        max-width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        overflow: hidden;
     }
     .big-size{
         font-size: 55px;
@@ -236,6 +348,9 @@ footer {
     }
     .medium-size{
         font-size: 130%;
+    }
+    .nav{
+        padding-bottom: 2em;
     }
     .sub-main-top, .sub-main-mid, .sub-main-bot {
         margin-right: 0em;
@@ -247,30 +362,60 @@ footer {
         margin-top: 7em;
     }
     .sub-main-bot .thump,#footer-image{
-        height: 17em;
+        height: 18em;
     }
     .header-bot .big-size{
         margin-top: 8em;
     }
     .header-bot .small-size{
-        margin-bottom: 10em;
+        margin-bottom: 8em;
     }
-}
+    .son-site .container{
+        margin-top: 25em;
+    }
+    .site-login .container{
+        width: 50%;
+    }
+    .map{
+        height: 230px;
+    }
+    /*homework-site*/
+    .homework .container {
+        width: 75%;
+    }
+    .homework-items {
+        margin-right: auto;
+        margin-left: auto;
+        padding: 4em;
+    }
 
+    /*study-site*/
+    img.study-icons {
+       width: 200px;
+       height: 100px;
+   }
+}
 @media (min-width: 992px) {
     header{
-        max-width: 92%;
-        height: 6em;
-        margin-left: 4%;
+        max-width: 88%;
+        height: 5em;
+        margin-right: 6%;
+        margin-left: 6%;
+    }
+    .sub-header{
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .big-size{
-        font-size: 55px;
+        font-size: 64px;
+        line-height: 64px;
     }
     .small-size,{
-        font-size: 100%;
+        font-size: 15px;
     }
     .medium-size{
-        font-size: 130%;
+        font-size: 120%;
     }
     .sub-main-top, .sub-main-mid, .sub-main-bot {
         margin-right: 0em;
@@ -281,30 +426,66 @@ footer {
     .thump{
         margin-top: 3.5em;
     }
-   .sub-main-bot .thump,#footer-image{
-        height: 17em;
+    .sub-main-bot .thump,#footer-image{
+        height: 19em;
     }
     .header-bot .big-size{
-        margin-top: 4em;
-        line-height: 55px;
+        margin-top: 4.3em;
+        line-height: 64px;
+        font-size: 64px;
         margin-bottom: 8px;
     }
     .header-bot .small-size{
-        margin-bottom: 11em;
-        font-size: 15px;
+        margin-bottom: 16em;
+        font-size: 12px;
     }
+    .son-site .container{
+        margin-top: 12em;
+    }
+    .site-login{
+        width: 40%;
+    }
+    .sub-main-top .container, .sub-main-mid .container, .sub-main-bot .container{
+        width: 88%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .map{
+        height: 300px;
+    }
+    /*homework-site*/
+    .homework .container {
+        width: 70%;
+        margin-top: 12em;
+    }
+    .homework-items {
+        margin-right: auto;
+        margin-left: auto;
+        padding: 4em;
+    }
+    /*study-site*/
+    img.study-icons {
+       width: 250px;
+       height: 125px;
+   }
 }
 @media (min-width: 1200px) {
     header{
-        max-width: 92%;
-        height: 6em;
-        margin-left: 4%;
+        max-width: 87%;
+        height: 5em;
+        margin-right: 6.5%;
+        margin-left: 6.5%;
     }
-    .big-size{
-        font-size: 60px;
+    .nav > li > a{
+        margin-right: 3em;
     }
-    .small-size{
-        font-size: 120%;
+    header .btn{
+        margin-left: 2em;
+    }
+    .sub-header{
+        max-width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .medium-size{
         font-size: 170%;
@@ -315,14 +496,31 @@ footer {
         padding: 0em;
         margin-top: 5em;
     }
-   .sub-main-bot .thump,#footer-image{
+    .sub-main-bot .thump,#footer-image{
         height: 17em;
     }
     .thump{
         margin-top: 3.5em;
     }
     .sub-main-bot .thump{
-        height: 18em;
+        height: 19em;
         margin-left: 2em;
     }
+    .sub-main-bot .thump,#footer-image{
+        height: 18em;
+    }
+    .main-bot .row{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*homework-site*/
+    .homework .container {
+        width: 60%;
+    }
+    /*study-site*/
+    img.study-icons {
+       width: 300px;
+       height: 150px;
+   }
 }
