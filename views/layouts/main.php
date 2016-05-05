@@ -2,6 +2,7 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
+
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -16,7 +17,7 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
   <meta charset="<?= Yii::$app->charset ?>">
-  <link href='https://fonts.googleapis.com/css?family=Passion+One:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Passion+One:400,800' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?= Html::csrfMetaTags() ?>
   <title><?= Html::encode($this->title) ?></title>
@@ -25,13 +26,11 @@ AppAsset::register($this);
 <body>
   <?php $this->beginBody() ?>
   <?php 
-  $logo=Html::img(Yii::$app->request->baseUrl.'/image/logo.png',array('width'=>'269px','height'=>'115px ','title'=>'home page','id' => 'logo',
-    ));
-  $toIndex = Html::a("$logo",['/site/index']);
+  $logo=Html::img(Yii::$app->request->baseUrl.'/image/logo.png',array('width'=>'269px','height'=>'50%','title'=>'home page','id' => 'logo'));
   $btnDangKy=Html::a('Đăng ký học thử miễn phí','https://docs.google.com/forms/d/1uP3xRPPnzhGgF7ikqCvxzC9UDSA5qOAU4MiNe2Kx9y4/viewform',['class' => 'btn btn-danger']);
   $menuItems = [
   ['label' => 'Home', 'url' => ['/site/index']],
-  ['label' => 'study', 'url' => ['/site/study']],
+  ['label' => 'study', 'url' => ['/site/study']]
   /*'items'=>[
   ['label'=>'homework','url'=>['#']],
   ['label'=>'listening','url'=>['#']],
@@ -60,12 +59,12 @@ AppAsset::register($this);
     <header class="clearfix">
       <div class="row">
         <div class="col-sm-12 col-md-2 col-lg-2">
-          <?=$toIndex;?> 
+          <?=$logo;?> 
         </div>
         <?php if(Yii::$app->user->isGuest){
           echo '<div class="col-xs-12 col-sm-12 col-md-2 col-md-push-6">'.$btnDangKy.'</div>';
         } ?>
-        <div class="col-xs-12 col-sm-12 col-md-5 col-md-rush-3">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-md-rush-5">
           <nav>
             <?=Nav::widget([
               'options' => ['class' => 'menu'],
@@ -77,41 +76,45 @@ AppAsset::register($this);
           <div class="clearfix"></div>
         </div>                    
       </header> 
-      <div class="contents">
-        <div class="container">
-          <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= Alert::widget() ?>
-            <?= $content ?>
-          </div>
+      <div class="container">
+        <?= Breadcrumbs::widget([
+          'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+          ]) ?>
+          <?= Alert::widget() ?>
+          <?= $content ?>
         </div>
-        <?php $footer ='
-        <footer class="footer">
+        <?php $footer ='<footer class="footer">
           <div class="container">
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 about">
-                <address>
-                  <strong>Tata English</strong><br>
-                  Address: Số 9, ngõ 1, đường Cầu Vồng, Đức Thắng, Bắc Từ Liêm, Hà Nội.<br>
-                  <abbr title="Phone">Phone:+84 0462 544 288/+84 0981 222 085<br>
-                  </abbr>
-                  Email: <a href="mailto:tata.edu.vn@gmail.com">tata.edu.vn@gmail.com</a><br>
-                  FB: <a href="https://www.facebook.com/tata.edu.vn/?fref=ts">Page Facebook</a>
-                </abbr> 
-              </address>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 ">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29781.04442587521!2d105.781308!3d21.087413!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xea04d15c4e0ccb03!2sTATA+Learning+English+for+Future!5e0!3m2!1sen!2sus!4v1461201342675"width="100%"frameborder="0"style="border:0" allowfullscreen class="map"></iframe>
-            </div>
-          </div>  
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                  <address>
+                    <strong>Tata English</strong><br>
+                    Số 9, ngõ 1, đường Cầu Vồng, Đức Thắng, Bắc Từ Liêm, Hà Nội.<br>
+                    <abbr title="Phone">P:+84 0462 544 288<br>
+                      +84 0981 222 085<br>
+                    </abbr>
+                    <a href="https://www.facebook.com/tata.edu.vn/?fref=ts">Page Facebook</a>
+                  </abbr> 
+                </address>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29781.04442587521!2d105.781308!3d21.087413!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xea04d15c4e0ccb03!2sTATA+Learning+English+for+Future!5e0!3m2!1sen!2sus!4v1461201342675" width="100%" height="80%" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                <?php
+
+                ?>
+              </div>
+            </div>  
           <div class="clearfix"></div>
         </div>
-      </footer>'?>
-      <?php if(Yii::$app->user->isGuest){
-        echo $footer;
-      } ?>
-    </div>
+      </footer>
+    </div>' ?>
+    <?php if(Yii::$app->user->isGuest){
+          echo $footer;
+        } ?>
     <?php $this->endBody() ?>
   </body>
   </html>
