@@ -113,7 +113,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionContact()
+    /*public function actionContact()
     {
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
@@ -127,19 +127,19 @@ class SiteController extends Controller
         } else {
             return $this->render('contact', [
                 'model' => $model,
-            ]);
+                ]);
         }
-    }
+    }*/
 
     /**
      * Displays about page.
      *
      * @return mixed
-     */
+     *//*
     public function actionAbout()
     {
         return $this->render('about');
-    }
+    }*/
 
     /**
      * Signs user up.
@@ -160,6 +160,26 @@ class SiteController extends Controller
         return $this->render('signup', [
             'model' => $model,
         ]);
+    }
+
+    public function actionStudy()
+    {
+        return $this->render('study');
+    }
+    public function actionLotrinh()
+    {
+        return $this->render('lotrinh');
+    }
+    public function actionCamnhan()
+    {
+        return $this->render('camnhan');
+    }
+    public function actionTrangweb()
+    {
+        return $this->render('trangweb');
+    }
+    public function actionHomework(){
+        return $this -> render('homework');
     }
 
     /**
